@@ -1,13 +1,21 @@
-import java.util.InputMismatchException;
+/* Group Calculator Project
+   Grade Info Toolkit
+
+   Made by:
+   =========================================
+   Zach Saunders
+   *Insert your names here*
+ */
+
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
-public class calculator
-{
-    public static void main(String[] args) 
-    {
+public class calculator {
+    public static void main(String[] args) {
         float homeWeight; //constant
         float classWeight; //constant
         float testWeight; //constant
+        float examWeight; //constant
         float homeScore; //numerator
         float homePossible; //denominator
         int userChoice;
@@ -21,21 +29,27 @@ public class calculator
         System.out.print("\nLet's start with what you want to do:");
 
         userChoice = choiceChecker.nextInt();
-
+        if (userChoice == 1) {
+            gpaCalc();
         }
-    }
-    public static void gpaCalc()
-    {
+        else if (userChoice == 2) {
+            gradeCalc();
+        }
+        else if (userChoice == 3) {
+            examCalc();
+        }
 
     }
-    public static void gradeCalculator()
-    {
+
+    private static int gpaCalc() {
 
     }
-    public static void examCalculator()
-    {
+
+    private static int gradeCalc() {
 
     }
-    // At this point we need each of the functions to be built
-    // Additionally, running this program atm will throw an error
+
+    private static int examCalc() {
+
+    }
 }
