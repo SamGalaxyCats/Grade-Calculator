@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class calculator
@@ -9,6 +10,7 @@ public class calculator
         float testWeight; //constant
         float homeScore; //numerator
         float homePossible; //denominator
+        int userChoice;
         Scanner choiceChecker = new Scanner(System.in); // Scanner to be used in any user interaction
 
         // Introductory period, where user makes choice.
@@ -16,11 +18,24 @@ public class calculator
         System.out.println("1. GPA Calculator");
         System.out.println("2. Current grade with assignment weighting");
         System.out.println("3. Score required on exam to get given letter grade");
-        System.out.print("\n");
-        System.out.println("Let's start with what you want to do:");
-        System.out.println();
-        int userChoice = choiceChecker.nextInt();
+        System.out.print("\nLet's start with what you want to do:");
 
-        // At this point we need each of the functions
+        userChoice = choiceChecker.nextInt();
+
+        }
     }
+    public static void gpaCalc()
+    {
+
+    }
+    public static void gradeCalculator()
+    {
+
+    }
+    public static void examCalculator()
+    {
+
+    }
+    // At this point we need each of the functions to be built
+    // Additionally, running this program atm will throw an error
 }
