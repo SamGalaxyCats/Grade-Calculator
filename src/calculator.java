@@ -16,8 +16,6 @@ public class calculator {
         float classWeight; //constant
         float testWeight; //constant
         float examWeight; //constant
-        float homeScore; //numerator
-        float homePossible; //denominator
         int userChoice;
         Scanner choiceChecker = new Scanner(System.in); // Scanner to be used in any user interaction
 
@@ -50,19 +48,26 @@ public class calculator {
     private static float gradeCalc() 
     {
     	float grade = 0;
+    	float homeworkWeight = 0.1;
+    	float classworkWeight = 0.3;
+    	float testWeight = 0.3;
+    	float homeScore = 0; //numerator
+        float homePossible = 0; //denominator
     	Scanner in = new Scanner(System.in);
-    	System.out.println("Use default weights of categories? (Y/N):");
-    	String UserAnswer = in.next();
-    	if(UserAnswer.equalsIgnoreCase(Y))
+    	boolean moreGrades = true;
+    	System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 30% tests.");
+    	do
     	{
-    		
-    	}
-    	else
-    	{
-    		//Place holder for if I have time to make weights happen.
-    	}
-    	
-    	
+    		System.out.println("You are currently adding scores for homework. Please type the numerator of the next item. You can also type a non-number if you're finished: ");
+    		if(in.hasNextFloat())
+    		{
+    			homeScore += in.nextFloat();
+    		}
+    		else
+    		{
+    			moreGrades = false;
+    		}
+    	}(while moreGrades);
     	in.close();
     	return grade;
     }
