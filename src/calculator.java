@@ -7,7 +7,6 @@
    *Insert your names here*
  */
 
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class calculator {
@@ -26,9 +25,15 @@ public class calculator {
         System.out.println("1. GPA Calculator");
         System.out.println("2. Current grade with assignment weighting");
         System.out.println("3. Score required on exam to get given letter grade");
-        System.out.print("\nLet's start with what you want to do:");
+        System.out.print("\nLet's start with what you want to do: ");
 
+        while (!choiceChecker.hasNextInt())
+        {
+            System.out.println("Please enter a number show above.");
+            choiceChecker.next();
+        }
         userChoice = choiceChecker.nextInt();
+
         if (userChoice == 1) {
             gpaCalc();
         }
@@ -43,8 +48,8 @@ public class calculator {
 
     private static float gpaCalc() 
     {
-    	float retFloat = 0;
-    	return retFloat;
+    	float gpaFloat = 0;
+    	return gpaFloat;
     }
 
     private static float gradeCalc() 
