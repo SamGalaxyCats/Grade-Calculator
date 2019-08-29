@@ -4,10 +4,10 @@
    Made by:
    =========================================
    Zach Saunders
+   Sam Bowsher
    *Insert your names here*
  */
 
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class calculator {
@@ -49,8 +49,22 @@ public class calculator {
 
     private static float gradeCalc() 
     {
-    	float retFloat = 0;
-    	return retFloat;
+    	float grade = 0;
+    	Scanner in = new Scanner(System.in);
+    	System.out.println("Use default weights of categories? (Y/N):");
+    	String UserAnswer = in.next();
+    	if(UserAnswer.equalsIgnoreCase(Y))
+    	{
+    		
+    	}
+    	else
+    	{
+    		//Place holder for if I have time to make weights happen.
+    	}
+    	
+    	
+    	in.close();
+    	return grade;
     }
 
     private static float examCalc() 
