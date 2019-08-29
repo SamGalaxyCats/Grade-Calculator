@@ -41,15 +41,21 @@ public class calculator {
 
     }
 
-    private static int gpaCalc() {
-
+    private static float gpaCalc() 
+    {
+    	float retFloat = 0;
+    	return retFloat;
     }
 
-    private static int gradeCalc() {
-
+    private static float gradeCalc() 
+    {
+    	float retFloat = 0;
+    	return retFloat;
     }
 
-    private static int examCalc() {
-
+    private static float examCalc() 
+    {
+    	float neededScore = 0;
+    	return neededScore;
     }
 }
