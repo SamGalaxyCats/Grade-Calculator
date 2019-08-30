@@ -138,15 +138,26 @@ public class calculator {
         Scanner in = new Scanner(System.in);
         boolean moreGrades = true;
         System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 30% tests.");
-        do {
+        do 
+        {
             System.out.println("You are currently adding scores for homework. Please type the numerator of the next item. You can also type a non-number if you're finished: ");
-            if (in.hasNextFloat()) {
+            if (in.hasNextFloat()) 
+            {
                 homeScore += in.nextFloat();
-            } else {
+                System.out.println("Please type the denominator for the same item");
+                if(in.hasNextFloat())
+                {
+                	homePossible += in.nextFloat();
+                }
+            } 
+            else 
+            {
                 moreGrades = false;
             }
         } while (moreGrades);
+        
         in.close();
+        return grade;
     }
 
     private static void examCalc() {
