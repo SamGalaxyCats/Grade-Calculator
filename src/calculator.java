@@ -134,22 +134,29 @@ public class calculator {
         float homeworkWeight = (float) 0.1;
         float classworkWeight = (float) 0.3;
         float testWeight = (float) 0.6;
-        float homeScore = 0; //numerator
-        float homePossible = 0; //denominator
         float homeResult;
         Scanner in = new Scanner(System.in);
-        boolean moreGrades = true;
         System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 30% tests.");
+        homeResult = subjectMath("homework", in);
+        in.close();
+    }
+    
+    private static float subjectMath(String Subject, Scanner pipe)
+    {
+    	float result = 0;
+    	float score = 0; //numerator
+        float possible = 0; //denominator
+        boolean moreGrades = true;
         do 
         {
-            System.out.println("You are currently adding scores for homework. Please type the numerator of the next item. You can also type a non-number if you're finished: ");
-            if (in.hasNextFloat()) 
+            System.out.println("You are currently adding scores for " + Subject + ". Please type the numerator of the next item. You can also type a non-number if you're finished: ");
+            if (pipe.hasNextFloat()) 
             {
-                homeScore += in.nextFloat();
+                score += pipe.nextFloat();
                 System.out.println("Please type the denominator for the same item");
-                if(in.hasNextFloat())
+                if(pipe.hasNextFloat())
                 {
-                	homePossible += in.nextFloat();
+                	possible += pipe.nextFloat();
                 }
             } 
             else 
@@ -157,8 +164,9 @@ public class calculator {
                 moreGrades = false; //To stop entering grades.
             }
         } while (moreGrades);
-        homeResult = homeScore / homePossible;
-        in.close();
+        result = score / possible;
+        System.out.println("Your total score on " + Subject + " is " + score + " out of " + possiple + ", or " + result);
+    	return result;
     }
 
     private static void examCalc() {
