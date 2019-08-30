@@ -148,10 +148,15 @@ public class calculator {
         float homeworkWeight = (float) 0.1;
         float classworkWeight = (float) 0.3;
         float testWeight = (float) 0.6;
-        float homeResult;
+        float homeResult; //Percent Score in homework
+        float classResult; //Percent Score in classwork
+        float testResult; //Percent score in tess and quizzes.
         Scanner in = new Scanner(System.in);
-        System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 30% tests.");
+        System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 60% tests.");
         homeResult = subjectMath("homework", in);
+        classResult = subjectMath("classwork", in);
+        testResult = subjectMath("tests and quizzes", in);
+        grade = (homeworkWeight * homeResult) + (classworkWeight * classResult) + (testWeight * testResult);
         in.close();
     }
     
@@ -179,7 +184,7 @@ public class calculator {
             }
         } while (moreGrades);
         result = score / possible;
-        System.out.println("Your total score on " + Subject + " is " + score + " out of " + possiple + ", or " + result);
+        System.out.println("Your total score for " + Subject + " is " + score + " out of " + possiple + ", or " + result);
     	return result;
     }
 
