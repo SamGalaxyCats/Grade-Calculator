@@ -50,10 +50,22 @@ public class calculator {
     private static void gpaCalc() {
 
         double finished; // Just used to sate the compiler; no purpose
-
+         
         Scanner userInput = new Scanner(System.in);
         List<Double> grades = new ArrayList<Double>();
-
+         
+       System.out.println("Input how many AP classes you are taking");
+      int apClasses = 
+      myObj.nextInt();
+      System.out.println("Input how many Honors classes you are taking");
+      int honorsClasses =
+      myObj.nextInt();
+      double apBoost;
+      double honorBoost;
+      apBoost = apClasses * 1;
+      honorBoost = honorsClasses * .5;
+       
+       
         System.out.println("How many classes do you have?");
         int numberOfClasses = userInput.nextInt();
         System.out.println(numberOfClasses + " Classes");
@@ -121,6 +133,8 @@ public class calculator {
         finalGpa *= 100;
         finalGpa = (int) Math.round(finalGpa);
         finalGpa /= 100;
+        finalGpa + apBoost
+        finalGpa + honorBoost
 
         System.out.println("Your overall GPA is: " + finalGpa);
 
