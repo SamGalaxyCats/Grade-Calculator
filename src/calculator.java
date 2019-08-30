@@ -133,8 +133,8 @@ public class calculator {
         finalGpa *= 100;
         finalGpa = (int) Math.round(finalGpa);
         finalGpa /= 100;
-        finalGpa + apBoost
-        finalGpa + honorBoost
+        finalGpa += apBoost;
+        finalGpa += honorBoost;
 
         System.out.println("Your overall GPA is: " + finalGpa);
 
@@ -205,7 +205,7 @@ public class calculator {
             }
         } while (moreGrades);
         result = score / possible;
-        System.out.println("Your total score for " + Subject + " is " + score + " out of " + possiple + ", or " + result);
+        System.out.println("Your total score for " + Subject + " is " + score + " out of " + possible + ", or " + result);
         pipe.nextLine();
 		pipe.nextLine();
     	return result;
