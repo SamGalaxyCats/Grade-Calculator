@@ -206,6 +206,8 @@ public class calculator {
         } while (moreGrades);
         result = score / possible;
         System.out.println("Your total score for " + Subject + " is " + score + " out of " + possiple + ", or " + result);
+        pipe.nextLine();
+		pipe.nextLine();
     	return result;
     }
 
