@@ -128,7 +128,8 @@ public class calculator {
         finished = 0.1;
     }
 
-    private static void gradeCalc() {
+    private static void gradeCalc() 
+    {
         float grade = 0;
         float homeworkWeight = (float) 0.1;
         float classworkWeight = (float) 0.3;
@@ -157,7 +158,6 @@ public class calculator {
         } while (moreGrades);
         
         in.close();
-        return grade;
     }
 
     private static void examCalc() {
