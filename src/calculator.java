@@ -136,6 +136,7 @@ public class calculator {
         float testWeight = (float) 0.6;
         float homeScore = 0; //numerator
         float homePossible = 0; //denominator
+        float homeResult;
         Scanner in = new Scanner(System.in);
         boolean moreGrades = true;
         System.out.println("Your grade will be calculated at 10% homework, 30% classwork, and 30% tests.");
@@ -153,10 +154,10 @@ public class calculator {
             } 
             else 
             {
-                moreGrades = false;
+                moreGrades = false; //To stop entering grades.
             }
         } while (moreGrades);
-        
+        homeResult = homeScore / homePossible;
         in.close();
     }
 
