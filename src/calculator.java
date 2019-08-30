@@ -185,4 +185,27 @@ public class calculator {
 
     private static void examCalc() {
     }
+ public static void examGrade()
+    {
+    Scanner gradeInput = new Scanner(System.in);
+    System.out.print("Enter current grade here: ");
+    double examWeight = 0.3;
+    double currentGrade = gradeInput.nextDouble();
+    int passingGrade = 60;
+    double completeFinish;
+    double almostFinal;
+    almostFinal = passingGrade - ((1 - examWeight) * currentGrade);
+    completeFinish = almostFinal / examWeight; 
+   
+    System.out.print("you need to get a: " + completeFinish);
+    }
+    
 }
+
+    
+}
+
+}
+
+
+
