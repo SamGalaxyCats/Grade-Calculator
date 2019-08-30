@@ -157,6 +157,27 @@ public class calculator {
         classResult = subjectMath("classwork", in);
         testResult = subjectMath("tests and quizzes", in);
         grade = (homeworkWeight * homeResult) + (classworkWeight * classResult) + (testWeight * testResult);
+        grade *= 100; //Convert from decimal to percent.
+        if(grade >= 90)
+        {
+        	System.out.print("You have an A in this class, and your exact percentage is " + grade);
+        }
+        else if(grade >= 80)
+        {
+        	System.out.print("You have a B in this class, and your exact percentage is " + grade);
+        }
+        else if(grade >= 70)
+        {
+        	System.out.print("You have a C in this class, and your exact percentage is " + grade);
+        }
+        else if(grade >= 60)
+        {
+        	System.out.print("You have a D in this class, and your exact percentage is " + grade);
+        }
+        else
+        {
+        	System.out.print("You are failing this class, and your exact percentage is " + grade);
+        }
         in.close();
     }
     
@@ -172,7 +193,7 @@ public class calculator {
             if (pipe.hasNextFloat()) 
             {
                 score += pipe.nextFloat();
-                System.out.println("Please type the denominator for the same item");
+                System.out.println("Please type the denominator for the same item: ");
                 if(pipe.hasNextFloat())
                 {
                 	possible += pipe.nextFloat();
