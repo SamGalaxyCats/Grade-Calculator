@@ -30,7 +30,7 @@ public class calculator {
         System.out.print("\nLet's start with what you want to do: ");
 
         while (!choiceChecker.hasNextInt()) {
-            System.out.println("Please enter a number show above.");
+            System.out.println("Please enter a number shown above.");
             choiceChecker.next();
         }
         userChoice = choiceChecker.nextInt();
